@@ -1,14 +1,35 @@
 function oddIndices(arr) {
     // Return an array containing all the odd indices in the array
     // Your code here
-    for (let i = 1; i < arr.length(); i + 2) {
-
+    if (!Array.isArray(arr)) {
+        return [];
     }
+
+    let result = [];
+
+    for (let i = 1; i < arr.length; i += 2) {
+        result.push(arr[i]);
+    }
+
+    return result;
 }
 
 function oddReverse(arr) {
     // Return an array containing all the odd indices starting from the end
     // Your code here
+    if (!Array.isArray(arr)) {
+        return [];
+    }
+
+    let result = [];
+
+    for (let i = 1; i < arr.length; i += 2) {
+        result.push(arr[i]);
+    }
+
+    let reverseResult = result.reverse();
+
+    return reverseResult;
 }
 
 function secondPower(arr) {
